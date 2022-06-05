@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "GmarketSansB";
+    font-style: normal;
+    font-weight: 700;
+    src: local("../fonts/GmarketSansTTFBold.ttf"), local("../fonts/GmarketSansBold.otf"), url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */ url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family: "GmarketSansM";
+    font-style: normal;
+    font-weight: 500;
+    src: local("../fonts/GmarketSansTTFMedium.ttf"), local("../fonts/GmarketSansMedium.otf"), url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */ url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+    font-family: "GmarketSansL";
+    font-style: normal;
+    font-weight: 300;
+    src: local("../fonts/GmarketSansTTFLight.ttf"), local("../fonts/GmarketSansLight.otf"), url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */ url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: GmarketSansL;
+}
+
+$primary: #8b00ff;
+$secondary: #a0a0a0;
+$black: #000000;
+$white: #ffffff;
+$border: #dbdbdb;
+
+#gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    box-shadow: 0px 5px 9px 0px rgb(0, 0, 0, 0.05);
+    a.title {
+        color: $primary;
+        font-size: 25px;
+        font-family: GmarketSansB;
+        text-decoration: none;
+    }
+    nav {
+        a {
+            margin: 0 10px;
+            color: $secondary;
+            font-size: 20px;
+            font-family: GmarketSansM;
+            text-decoration: none;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1024px;
+    margin: 50px auto;
+}
+
+footer {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 30px 0;
+    border-top: 1px solid $border;
+    color: $secondary;
+    font-size: 14px;
+    font-family: GmarketSansM;
+    text-align: center;
+}
+
+// TABLET
+@media (max-width: 768px) {
+}
+
+// MOBILE M
+@media (max-width: 375px) {
+}

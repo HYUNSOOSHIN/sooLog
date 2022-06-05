@@ -15,5 +15,6 @@
     "rules": {
         "no-console": "warn", // console 체크
         "no-unused-vars": "warn", // 사용하지 않는 변수 체크
+        "no-undef": "off"
     }
 }
