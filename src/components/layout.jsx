@@ -26,7 +26,9 @@ const Layout = ({ children }) => {
         <>
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
             <main>{children}</main>
-            <footer>&copy; HYUNSOOSHIN</footer>
+            <footer>
+                <span className="copyright">&copy; HYUNSOOSHIN. 2022</span> <span className="powered">Powered by Gatsby</span>
+            </footer>
         </>
     );
 };
