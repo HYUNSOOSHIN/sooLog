@@ -25,6 +25,10 @@
         url("/fonts/GmarketSansTTFLight.ttf"), url("/fonts/GmarketSansLight.otf");
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     padding: 0;
@@ -52,12 +56,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    height: 70px;
+    padding: 0 30px;
     box-shadow: 0px 5px 9px 0px rgb(0, 0, 0, 0.05);
 
     a.title {
         color: $primary;
-        font-size: 25px;
+        font-size: 20px;
         font-family: GmarketSansB;
         text-decoration: none;
     }
@@ -66,7 +71,7 @@ header {
         a {
             margin: 0 10px;
             color: $secondary;
-            font-size: 20px;
+            font-size: 15px;
             font-family: GmarketSansM;
             text-decoration: none;
         }
@@ -90,17 +95,55 @@ footer {
     border-top: 1px solid $border;
 
     .copyright {
-        color: $secondary;
+        color: $black;
         font-size: 13px;
         font-family: GmarketSansM;
         text-align: center;
     }
 
     .powered {
-        color: $black;
+        color: $secondary;
         font-size: 13px;
         font-family: GmarketSansM;
         text-align: center;
+    }
+}
+
+#container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: calc(100vh - 70px);
+
+    .logo-view {
+        position: relative;
+        width: 180px;
+        height: 180px;
+    }
+
+    .logo {
+        cursor: pointer;
+        background-color: #7B68EE;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        &:hover {
+            width: 160px;
+            height: 160px;
+        }
+    }
+
+    h1 {}
+
+    p {
+        margin: 0;
     }
 }
 

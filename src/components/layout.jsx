@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Header from "./header";
 import "../styles/layout.scss";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isHeader = true }) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+            {isHeader && <Header siteTitle={data.site.siteMetadata?.title || `Title`} />}
             <main>{children}</main>
             <footer>
                 <span className="copyright">&copy; HYUNSOOSHIN. 2022</span> <span className="powered">Powered by Gatsby</span>
@@ -35,6 +35,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
+    isHeader: PropTypes.bool,
 };
 
 export default Layout;
