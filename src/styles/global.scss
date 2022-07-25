@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "GmarketSansB";
+    font-style: normal;
+    font-weight: 700;
+    src: url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff") format("woff"), url("/fonts/GmarketSansTTFBold.ttf"),
+        url("/fonts/GmarketSansBold.otf");
+}
+
+@font-face {
+    font-family: "GmarketSansM";
+    font-style: normal;
+    font-weight: 500;
+    src: url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff") format("woff"),
+        url("/fonts/GmarketSansTTFMedium.ttf"), url("/fonts/GmarketSansMedium.otf");
+}
+
+@font-face {
+    font-family: "GmarketSansL";
+    font-style: normal;
+    font-weight: 300;
+    src: url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff") format("woff"), url("/fonts/GmarketSansTTFLight.ttf"),
+        url("/fonts/GmarketSansLight.otf");
+}
+
+$primary: #7b68ee;
+$secondary: #a0a0a0;
+$black: #000000;
+$white: #ffffff;
+$border: #dbdbdb;
+
+* {
+    box-sizing: border-box;
+    font-size: GmarketSansL;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: GmarketSansL;
+}
+
+#gatsby-focus-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+}
+
+// TABLET
+@media (max-width: 768px) {}
+
+// MOBILE M
+@media (max-width: 375px) {}
+
+@import "layout.scss";
+@import "page.scss";
+@import "component.scss";

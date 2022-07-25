@@ -1,58 +1,3 @@
-@font-face {
-    font-family: "GmarketSansB";
-    font-style: normal;
-    font-weight: 700;
-    src: url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansBold.woff") format("woff"), url("/fonts/GmarketSansTTFBold.ttf"),
-        url("/fonts/GmarketSansBold.otf");
-}
-
-@font-face {
-    font-family: "GmarketSansM";
-    font-style: normal;
-    font-weight: 500;
-    src: url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansMedium.woff") format("woff"),
-        url("/fonts/GmarketSansTTFMedium.ttf"), url("/fonts/GmarketSansMedium.otf");
-}
-
-@font-face {
-    font-family: "GmarketSansL";
-    font-style: normal;
-    font-weight: 300;
-    src: url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff2") format("woff2"), url("http://script.ebay.co.kr/fonts/GmarketSansLight.woff") format("woff"), url("/fonts/GmarketSansTTFLight.ttf"),
-        url("/fonts/GmarketSansLight.otf");
-}
-
-* {
-    box-sizing: border-box;
-}
-
-button {
-    background-color: inherit;
-    border: none;
-    outline: none;
-}
-
-html,
-body {
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    font-family: GmarketSansL;
-}
-
-$primary: #7b68ee;
-$secondary: #a0a0a0;
-$black: #000000;
-$white: #ffffff;
-$border: #dbdbdb;
-
-#gatsby-focus-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 header {
     background-color: $white;
     position: sticky;
@@ -137,68 +82,6 @@ footer {
     }
 }
 
-#container-home {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-    z-index: 0;
-
-    .logo-view {
-        position: relative;
-        width: 180px;
-        height: 180px;
-    }
-
-    .logo {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
-        border: 3px solid $primary;
-        border-radius: 50%;
-        z-index: 0;
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-        }
-
-        &:hover {
-            width: 160px;
-            height: 160px;
-        }
-    }
-
-    h1 {
-        margin: 15px 0;
-        font-size: 30px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-}
-
-#container-resume {
-}
-
-#container-about {
-}
-
-#container-blog {
-}
-
 // TABLET
 @media (max-width: 768px) {
     header {
@@ -236,31 +119,20 @@ footer {
     }
 
     main {
+        padding: 0 10px;
     }
 
     footer {
         padding: 0 30px;
     }
-
-    #container-home {
-    }
-
-    #container-resume {
-    }
-
-    #container-about {
-    }
-
-    #container-blog {
-    }
 }
 
 // MOBILE M
 @media (max-width: 375px) {
-    header {
-    }
+    header {}
 
     main {
+        padding: 0 15px;
     }
 
     footer {
@@ -274,17 +146,5 @@ footer {
         .powered {
             font-size: 10px;
         }
-    }
-
-    #container-home {
-    }
-
-    #container-resume {
-    }
-
-    #container-about {
-    }
-
-    #container-blog {
     }
 }
