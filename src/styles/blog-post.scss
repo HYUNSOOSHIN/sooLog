@@ -1,0 +1,43 @@
+.blog-post-view {
+    .title-view {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #dbdbdb;
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 38px;
+            font-family: GmarketSansM;
+        }
+
+        p {
+            font-size: 13px;
+            font-family: GmarketSansL;
+        }
+    }
+
+    .contents-view {
+        padding: 20px 0;
+        font-size: 16px;
+        font-family: GmarketSansM;
+    }
+
+    .bio-view {}
+}
+
+.blog-post-nav {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none;
+        margin-top: 50px;
+        padding: 0;
+
+        a {
+            color: #000000;
+            font-size: 16px;
+            font-family: GmarketSansM;
+            text-decoration: none;
+        }
+    }
+}

@@ -73,6 +73,37 @@
 #container-blog {
     .blog-list-view {
         padding-top: 30px;
+
+        .blog-list-item {
+            margin-bottom: 40px;
+            padding: 16px;
+
+            transition: 0.3s;
+
+            a {
+                margin-bottom: 8px;
+                color: $black;
+                font-size: 16px;
+                font-family: GmarketSansL;
+                text-decoration: none;
+
+                h2 {
+                    margin-bottom: 12px;
+                    font-size: 24px;
+                    font-family: GmarketSansM;
+                }
+
+                .date {
+                    margin-bottom: 12px;
+                    font-size: 13px;
+                }
+            }
+
+            &:hover {
+                transform: translate(0, -5px);
+                box-shadow: 2px 4px 6px 0 rgba(0, 0, 0, 0.1);
+            }
+        }
     }
 }
 
