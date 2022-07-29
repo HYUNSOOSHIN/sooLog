@@ -5,7 +5,11 @@ import Seo from "../components/seo";
 const AboutPage = () => (
     <Layout>
         <Seo title="About" />
-        <div id="container-about">사이트 설명 페이지입니다.</div>
+        <div id="container-about">
+            <h1>제목입니다!!</h1>
+            <p className="">내용입니다!!</p>
+            <img src="" alt="about img" />
+        </div>
     </Layout>
 );
 

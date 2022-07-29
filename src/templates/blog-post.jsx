@@ -15,6 +15,10 @@ const BlogPostTemplate = ({ data, location }) => {
         <Layout location={location} title={siteTitle}>
             <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 
+            <aside>
+                <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+            </aside>
+
             <article className="blog-post-view">
                 <div className="title-view">
                     <h1>{post.frontmatter.title}</h1>
@@ -61,6 +65,7 @@ export const pageQuery = graphql`
             id
             excerpt(pruneLength: 160)
             html
+            tableOfContents
             frontmatter {
                 title
                 date(formatString: "YYYY.MM.DD")

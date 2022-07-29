@@ -38,6 +38,7 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`,
                         },
                     },
+                    `gatsby-remark-autolink-headers`,
                     `gatsby-remark-prismjs`,
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
@@ -52,12 +53,12 @@ module.exports = {
                 name: `gatsby-starter-default`,
                 short_name: `starter`,
                 start_url: `/`,
-                background_color: `#663399`,
+                background_color: `#ffffff`,
                 // This will impact how browsers show your PWA/website
                 // https://css-tricks.com/meta-theme-color-and-trickery/
                 // theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+                icon: `src/images/favicon.png`, // This path is relative to the root of the site.
             },
         },
         `gatsby-plugin-sass`,

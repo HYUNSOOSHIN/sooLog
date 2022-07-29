@@ -1,3 +1,21 @@
+*::selection {
+    background-color: #e6e6fa;
+}
+
+aside {
+    position: fixed;
+    top: 200px;
+    right: 0;
+    width: calc((100% - 1024px) / 2);
+
+    .toc {
+        a {
+            color: #000000;
+            font-size: 16px;
+        }
+    }
+}
+
 .blog-post-view {
     .title-view {
         padding-bottom: 20px;
