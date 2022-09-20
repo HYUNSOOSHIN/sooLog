@@ -1,22 +1,108 @@
 /* eslint-disable react/prop-types */
-import * as React from "react";
+import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
+import { navigate } from "@reach/router";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Bio from "../components/bio";
 import "../styles/blog-post.scss";
+import { useScrollEvent } from "../hooks/useScrollEvent";
 
 const BlogPostTemplate = ({ data, location }) => {
     const post = data.markdownRemark;
     const siteTitle = data.site.siteMetadata?.title || `Title`;
     const { previous, next } = data;
 
+    useEffect(() => {
+        const headerElements = getHeaderElements();
+
+        headerElements.forEach((headerElement) => {
+            const tocLinkElement = document.querySelector(`a[href*="${encodeURI(headerElement.id)}"]`);
+            if (tocLinkElement)
+                tocLinkElement.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    navigate(`#${headerElement.id}`, { replace: true });
+                });
+        });
+    });
+
+    const getHeaderElements = () => {
+        const headerSelectors = `h1, h2, h3, h4`;
+        return Array.from(document.querySelectorAll(headerSelectors));
+    };
+
+    const onScroll = () => {
+        const currentoffsetY = window.pageYOffset;
+        const headerElements = getHeaderElements();
+        for (const headerElement of headerElements) {
+            const { top } = headerElement.getBoundingClientRect();
+            const elementTop = top + currentoffsetY;
+            const tocLinkElement = document.querySelector(`a[href*="${encodeURI(headerElement.id)}"]`);
+            if (tocLinkElement) {
+                if (currentoffsetY >= elementTop - 10) {
+                    headerElement.classList.add("toc-header-active");
+                    tocLinkElement.classList.add("active");
+                } else {
+                    headerElement.classList.remove("toc-header-active");
+                    tocLinkElement.classList.remove("active");
+                }
+            }
+        }
+    };
+
+    const toFit = (cb, { dismissCondition = () => false, triggerCondition = () => true }) => {
+        if (!cb) {
+            throw Error("Invalid required arguments");
+        }
+
+        let tick = false;
+
+        return function () {
+            if (tick) {
+                return;
+            }
+
+            tick = true;
+            return requestAnimationFrame(() => {
+                if (dismissCondition()) {
+                    tick = false;
+                    return;
+                }
+
+                if (triggerCondition()) {
+                    tick = false;
+                    return cb();
+                }
+            });
+        };
+    };
+
+    useScrollEvent(() => {
+        return toFit(onScroll, {})();
+    });
+
     return (
         <Layout location={location} title={siteTitle}>
             <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 
             <aside>
-                <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} />
+                {/* <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} /> */}
+                <div className="toc">
+                    <p>Table of Contents</p>
+                    {post.headings.map((heading) => {
+                        if (heading.depth > 4) {
+                            return <div />;
+                        }
+
+                        return (
+                            <div key={heading.value}>
+                                <a className={"depth" + heading.depth} href={`#${heading.value.replace(/\s+/g, "-").toLowerCase()}`}>
+                                    {heading.value}
+                                </a>
+                            </div>
+                        );
+                    })}
+                </div>
             </aside>
 
             <article className="blog-post-view">
@@ -66,6 +152,10 @@ export const pageQuery = graphql`
             excerpt(pruneLength: 160)
             html
             tableOfContents
+            headings {
+                value
+                depth
+            }
             frontmatter {
                 title
                 date(formatString: "YYYY.MM.DD")

@@ -8,7 +8,7 @@ const SIDE_PROJECTS = [
         title: "SOCKER",
         links: {},
         subject: "소상공인 커뮤니티 서비스",
-        img: "/images/SOCKER.png",
+        img: "/images/SOCKER.jpg",
         descriptionList: ["팀 프로젝트 : 앱 개발자로 참여", "기간 : 2022.04-진행중", "Tech Stack : Node.js / Vue.js / React Native"],
     },
     {
