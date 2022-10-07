@@ -111,3 +111,9 @@ aside {
         }
     }
 }
+
+@media (max-width: 1600px) {
+    aside {
+        display: none;
+    }
+}
