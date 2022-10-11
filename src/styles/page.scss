@@ -80,6 +80,7 @@
 
     section {
         margin-bottom: 50px;
+
         h2 {
             font-size: 32px;
             font-family: GmarketSansM;
@@ -167,7 +168,7 @@
                 color: $black;
                 text-decoration: none;
 
-                & > span {
+                &>span {
                     display: inline-block;
                     margin-bottom: 10px;
                     border-bottom: 1px solid $border;
@@ -190,17 +191,19 @@
 
                 div.left {
                     width: 250px;
+
                     p.position {
                         margin-bottom: 8px;
                         font-size: 16px;
                         font-family: GmarketSansM;
                     }
-                    p.period {
-                    }
+
+                    p.period {}
                 }
 
                 div.right {
                     flex: 1;
+
                     li {
                         line-height: 1.4;
                     }
@@ -208,14 +211,17 @@
             }
         }
     }
+
     section.skill {
         li {
             line-height: 1.4;
         }
     }
+
     section.sideproject {
         .project-item {
             margin-bottom: 50px;
+
             &:last-child {
                 margin: 0;
             }
@@ -232,6 +238,7 @@
 
             a {
                 margin-left: 12px;
+
                 i {
                     color: #dbdbdb;
                 }
@@ -273,6 +280,7 @@
 
             ul {
                 margin-top: 8px;
+
                 li {
                     font-size: 13px;
                     line-height: 1.2;
@@ -280,8 +288,8 @@
             }
         }
     }
-    section.education {
-    }
+
+    section.education {}
 }
 
 #container-about {
@@ -303,32 +311,75 @@
 }
 
 #container-blog {
+    aside {
+        position: absolute;
+        top: 120px;
+        left: 50px;
+
+        h2 {
+            margin-bottom: 20px;
+            color: $primary;
+            font-size: 24px;
+            font-family: GmarketSansM;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: $black;
+            font-size: 16px;
+            font-family: GmarketSansM;
+        }
+    }
+
     .blog-list-view {
         padding-top: 30px;
 
         .blog-list-item {
             margin-bottom: 40px;
             padding: 16px;
-
             transition: 0.3s;
 
+
             a {
-                margin-bottom: 8px;
+                text-decoration: none;
+            }
+
+            h2 {
+                margin-bottom: 12px;
+                color: $black;
+                font-size: 24px;
+                font-family: GmarketSansM;
+
+            }
+
+            .date {
+                margin-bottom: 12px;
+                font-size: 13px;
+            }
+
+            ul.tag-list {
+                display: flex;
+                margin-bottom: 12px;
+
+                li {
+                    margin-right: 10px;
+
+                    button {
+                        cursor: pointer;
+                        background-color: $primary;
+                        padding: 4px 6px;
+                        border-radius: 6px;
+                        color: #ffffff;
+                        font-size: 14px;
+                        font-family: GmarketSansM;
+                    }
+                }
+            }
+
+            .description {
                 color: $black;
                 font-size: 16px;
                 font-family: GmarketSansL;
-                text-decoration: none;
-
-                h2 {
-                    margin-bottom: 12px;
-                    font-size: 24px;
-                    font-family: GmarketSansM;
-                }
-
-                .date {
-                    margin-bottom: 12px;
-                    font-size: 13px;
-                }
             }
 
             &:hover {
@@ -352,8 +403,7 @@
         }
     }
 
-    #container-home {
-    }
+    #container-home {}
 
     #container-resume {
         section.introduce {
@@ -381,21 +431,16 @@
             }
         }
 
-        section.skill {
-        }
+        section.skill {}
 
-        section.sideproject {
-        }
+        section.sideproject {}
 
-        section.education {
-        }
+        section.education {}
     }
 
-    #container-about {
-    }
+    #container-about {}
 
-    #container-blog {
-    }
+    #container-blog {}
 }
 
 // MOBILE M
@@ -411,8 +456,7 @@
         }
     }
 
-    #container-home {
-    }
+    #container-home {}
 
     #container-resume {
         section.sideproject {
@@ -424,9 +468,7 @@
         }
     }
 
-    #container-about {
-    }
+    #container-about {}
 
-    #container-blog {
-    }
+    #container-blog {}
 }

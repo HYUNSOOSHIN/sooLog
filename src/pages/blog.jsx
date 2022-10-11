@@ -7,34 +7,43 @@ import Bio from "../components/bio";
 
 const BlogPage = ({ data, location }) => {
     const posts = data.allMarkdownRemark.nodes;
+    const filteredTags = Array.from(new Set([].concat(...posts.map((post) => post.frontmatter.tags || []))));
 
     return (
         <Layout location={location} title={"Blog"}>
             <Seo title="Blog" />
             <div id="container-blog">
                 <Bio />
+                <aside>
+                    <h2>Tags</h2>
+                    {filteredTags.map((tag, tagIndex) => (
+                        <p key={tag + tagIndex}>{tag}</p>
+                    ))}
+                </aside>
                 <ol className="blog-list-view">
                     {posts.map((post) => {
                         const title = post.frontmatter.title || post.fields.slug;
+                        const description = post.frontmatter.description || post.excerpt;
+                        const tags = post.frontmatter.tags || [];
 
                         return (
                             <li key={post.fields.slug} className="blog-list-item">
                                 <Link to={post.fields.slug}>
-                                    <>
-                                        <h2>{title}</h2>
-                                        <p className="date">{post.frontmatter.date}</p>
-                                        {/* <ul className="tag-list">
-                                            <li>태그1</li>
-                                            <li>태그2</li>
-                                        </ul> */}
-                                        <section>
-                                            <p
-                                                dangerouslySetInnerHTML={{
-                                                    __html: post.frontmatter.description || post.excerpt,
-                                                }}
-                                            />
-                                        </section>
-                                    </>
+                                    <h2>{title}</h2>
+                                </Link>
+
+                                <p className="date">{post.frontmatter.date}</p>
+                                {tags.length > 0 && (
+                                    <ul className="tag-list">
+                                        {tags.map((tag, tabIndex) => (
+                                            <li key={tag + tabIndex}>
+                                                <button>{tag}</button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                                <Link to={post.fields.slug}>
+                                    <p className="description" dangerouslySetInnerHTML={{ __html: description }} />
                                 </Link>
                             </li>
                         );
@@ -64,6 +73,7 @@ export const pageQuery = graphql`
                     date(formatString: "YYYY.MM.DD")
                     title
                     description
+                    tags
                 }
             }
         }

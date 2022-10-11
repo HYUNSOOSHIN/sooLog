@@ -1,6 +1,7 @@
 ---
 title: My Second Post!
 date: "2022-07-26T23:46:37.121Z"
+tags: ['test']
 ---
 
 Wow! I love blogging so much already.

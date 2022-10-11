@@ -2,6 +2,7 @@
 title: Hello World
 date: "2022-07-26T22:12:03.284Z"
 description: "Hello World"
+tags: ['test', 'sample']
 ---
 
 This is my first post on my new fake blog! How exciting!
