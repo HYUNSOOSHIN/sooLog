@@ -292,28 +292,10 @@
     section.education {}
 }
 
-#container-about {
-    h1 {
-        margin-bottom: 12px;
-        font-size: 38px;
-        font-family: GmarketSansM;
-    }
-
-    p {
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
-
-    img {
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
 #container-blog {
     aside {
         position: absolute;
-        top: 120px;
+        top: 265px;
         left: 50px;
 
         h2 {
@@ -323,11 +305,17 @@
             font-family: GmarketSansM;
         }
 
-        p {
+        a {
+            display: block;
             margin-bottom: 12px;
-            color: $black;
+            color: $secondary;
             font-size: 16px;
             font-family: GmarketSansM;
+            text-decoration: none;
+
+            &.active {
+                color: $black;
+            }
         }
     }
 
@@ -338,7 +326,6 @@
             margin-bottom: 40px;
             padding: 16px;
             transition: 0.3s;
-
 
             a {
                 text-decoration: none;
@@ -380,6 +367,7 @@
                 color: $black;
                 font-size: 16px;
                 font-family: GmarketSansL;
+                line-height: 1.4;
             }
 
             &:hover {
@@ -438,8 +426,6 @@
         section.education {}
     }
 
-    #container-about {}
-
     #container-blog {}
 }
 
@@ -467,8 +453,6 @@
             }
         }
     }
-
-    #container-about {}
 
     #container-blog {}
 }

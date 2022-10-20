@@ -38,7 +38,6 @@ const Header = ({ siteTitle }) => {
             </button>
 
             <nav className={isSideBar ? "active" : ""}>
-                <Link to="/about">About</Link>
                 <Link to="/blog">Blog</Link>
                 <a href="https://github.com/HYUNSOOSHIN" target="_blank" rel="noreferrer">
                     Github

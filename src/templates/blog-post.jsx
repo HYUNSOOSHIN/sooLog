@@ -2,11 +2,11 @@
 import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
 import { navigate } from "@reach/router";
+import { useScrollEvent } from "../hooks/useScrollEvent";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Bio from "../components/bio";
 import "../styles/blog-post.scss";
-import { useScrollEvent } from "../hooks/useScrollEvent";
 
 const BlogPostTemplate = ({ data, location }) => {
     const post = data.markdownRemark;

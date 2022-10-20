@@ -6,22 +6,31 @@ import Seo from "../components/seo";
 import Bio from "../components/bio";
 
 const BlogPage = ({ data, location }) => {
+    const urlSearchParams = new URLSearchParams(location.search);
+    const tagFilter = urlSearchParams.get("tag");
+
     const posts = data.allMarkdownRemark.nodes;
+    const filteredPosts = tagFilter == null ? posts : posts.filter((post) => (post.frontmatter.tags || []).includes(tagFilter));
     const filteredTags = Array.from(new Set([].concat(...posts.map((post) => post.frontmatter.tags || []))));
 
     return (
-        <Layout location={location} title={"Blog"}>
+        <Layout title={"Blog"}>
             <Seo title="Blog" />
             <div id="container-blog">
                 <Bio />
                 <aside>
                     <h2>Tags</h2>
+                    <Link className={tagFilter == null ? "active" : ""} to={`/blog`}>
+                        All
+                    </Link>
                     {filteredTags.map((tag, tagIndex) => (
-                        <p key={tag + tagIndex}>{tag}</p>
+                        <Link key={tag + tagIndex} className={tagFilter == tag ? "active" : ""} to={`/blog?tag=${tag}`}>
+                            {tag}
+                        </Link>
                     ))}
                 </aside>
                 <ol className="blog-list-view">
-                    {posts.map((post) => {
+                    {filteredPosts.map((post) => {
                         const title = post.frontmatter.title || post.fields.slug;
                         const description = post.frontmatter.description || post.excerpt;
                         const tags = post.frontmatter.tags || [];

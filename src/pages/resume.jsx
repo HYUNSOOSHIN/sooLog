@@ -9,7 +9,7 @@ const SIDE_PROJECTS = [
         links: {},
         subject: "소상공인 커뮤니티 서비스",
         img: "/images/SOCKER.jpg",
-        descriptionList: ["팀 프로젝트 : 앱 개발자로 참여", "기간 : 2022.04-진행중", "Tech Stack : Node.js / Vue.js / React Native"],
+        descriptionList: ["팀 프로젝트 : 프론트엔드 개발자로 참여", "기간 : 2022.04-진행중", "Tech Stack : Node.js / Next.js / React Native"],
     },
     {
         title: "SOOLOG",
@@ -55,7 +55,7 @@ const SIDE_PROJECTS = [
     },
 ];
 
-const BlogPage = () => (
+const ResumePage = () => (
     <Layout>
         <Seo title="Resume" />
         <div id="container-resume">
@@ -187,4 +187,4 @@ const BlogPage = () => (
     </Layout>
 );
 
-export default BlogPage;
+export default ResumePage;
