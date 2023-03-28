@@ -93,7 +93,7 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 32px;
+            font-size: 35px;
             font-family: GmarketSansM;
 
             .dot {
@@ -182,22 +182,22 @@
                 color: $black;
                 text-decoration: none;
 
-                &>span {
+                & > span {
                     display: inline-block;
                     margin-bottom: 10px;
                     border-bottom: 1px solid $border;
-                    font-size: 25px;
+                    font-size: 28px;
                 }
             }
 
             h3 {
-                font-size: 25px;
+                font-size: 28px;
                 margin-bottom: 12px;
             }
 
             p.description {
                 margin-bottom: 18px;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             div.flex-view {
@@ -208,17 +208,62 @@
 
                     p.position {
                         margin-bottom: 8px;
-                        font-size: 16px;
+                        font-size: 18px;
                         font-family: GmarketSansM;
                     }
 
-                    p.period {}
+                    p.period {
+                        font-size: 18px;
+                    }
                 }
 
                 div.right {
                     flex: 1;
 
                     li {
+                        font-size: 18px;
+                        line-height: 1.4;
+                    }
+                }
+            }
+
+            div.project-view {
+                .project-item {
+                    margin-bottom: 20px;
+
+                    &:first-child {
+                        margin-top: 15px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .title {
+                        margin-bottom: 8px;
+                        font-size: 15px;
+                        font-family: GmarketSansM;
+
+                        span.dot {
+                            color: $primary;
+                        }
+
+                        span.description {
+                            color: $secondary;
+                            font-size: 14px;
+                            font-family: GmarketSansL;
+                        }
+                    }
+
+                    .what-did-i-do {
+                        font-size: 14px;
+                        font-family: GmarketSansL;
+                        line-height: 1.4;
+                        white-space: pre-line;
+                    }
+
+                    .tech-stack {
+                        font-size: 14px;
+                        font-family: GmarketSansL;
                         line-height: 1.4;
                     }
                 }
@@ -297,13 +342,14 @@
 
                 li {
                     font-size: 13px;
-                    line-height: 1.2;
+                    line-height: 1.5;
                 }
             }
         }
     }
 
-    section.education {}
+    section.education {
+    }
 }
 
 #container-blog {
@@ -350,7 +396,6 @@
                 color: $black;
                 font-size: 24px;
                 font-family: GmarketSansM;
-
             }
 
             .date {
@@ -412,7 +457,8 @@
         }
     }
 
-    #container-home {}
+    #container-home {
+    }
 
     #container-resume {
         section.introduce {
@@ -440,14 +486,18 @@
             }
         }
 
-        section.skill {}
+        section.skill {
+        }
 
-        section.sideproject {}
+        section.sideproject {
+        }
 
-        section.education {}
+        section.education {
+        }
     }
 
-    #container-blog {}
+    #container-blog {
+    }
 }
 
 // MOBILE M
@@ -474,7 +524,8 @@
         }
     }
 
-    #container-home {}
+    #container-home {
+    }
 
     #container-resume {
         section.sideproject {
@@ -486,5 +537,6 @@
         }
     }
 
-    #container-blog {}
+    #container-blog {
+    }
 }
