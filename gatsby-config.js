@@ -1,20 +1,20 @@
 module.exports = {
     siteMetadata: {
         title: `HYUNSOOSHIN`,
-        description: `HYUNSOOSHIN page`,
+        description: `안녕하세요. 신현수입니다.`,
         author: `@HYUNSOOSHIN`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        siteUrl: `https://sooooolog.gatsbyjs.io`,
         fgbProjects: [
-            { title: "온리버디", description: "반려동물 용품 쇼핑몰", whatdidido: "사용자PC, 통합관리자, 벤더관리자 페이지 작업\n", techstack: "Next.js / Redux" },
+            { title: "온리버디", description: "반려동물 용품 쇼핑몰", whatdidido: " - 사용자PC, 통합관리자, 벤더관리자 페이지 작업\n - Next.js / Redux" },
             {
                 title: "미미마켓",
                 description: "지역기반 소상공인 상점 플랫폼",
-                whatdidido: "모바일 웹뷰에 들어갈 사용자, 상점주 페이지 작업\n통합관리자, 벤더관리자 페이지 작업\nReact Native 웹뷰, FCM, SNS로그인 작업\n웹뷰와 웹페이지간 데이터 통신 작업",
-                techstack: "Next.js / Redux / React Native",
+                whatdidido:
+                    " - 모바일 웹뷰에 들어갈 사용자, 상점주 페이지 작업\n - 통합관리자, 벤더관리자 페이지 작업\n - React Native 웹뷰, FCM, SNS로그인 작업\n - 웹뷰와 웹페이지간 데이터 통신 작업\n - Next.js / Redux / React Native",
             },
-            { title: "Elefarm", description: "스마트팜 관리", whatdidido: "스마트팜 관리자 페이지 작업", techstack: "Gatsby.js / Redux" },
-            { title: "동틀녘", description: "학생 알람앱", whatdidido: "모바일 웹뷰에 들어갈 사용자 페이지 작업\n관리자 페이지 작업", techstack: "Gatsby.js / Redux" },
-            { title: "심봉사", description: "봉사활동 정보앱", whatdidido: "모바일 웹뷰에 들어갈 사용자 페이지 작업\n관리자 페이지 작업", techstack: "Gatsby.js / Redux" },
+            { title: "Elefarm", description: "스마트팜 관리", whatdidido: " - 스마트팜 관리자 페이지 작업\n - Gatsby.js / Redux" },
+            { title: "동틀녘", description: "학생 알람앱", whatdidido: " - 모바일 웹뷰에 들어갈 사용자 페이지 작업\n - 관리자 페이지 작업\n - Gatsby.js / Redux" },
+            { title: "심봉사", description: "봉사활동 정보앱", whatdidido: " - 모바일 웹뷰에 들어갈 사용자 페이지 작업\n - 관리자 페이지 작업\n - Gatsby.js / Redux" },
         ],
         sideProjects: [
             {
@@ -56,7 +56,7 @@ module.exports = {
             {
                 title: "한담",
                 links: {
-                    link: "nothing",
+                    github: "https://github.com/HYUNSOOSHIN/handam-client",
                 },
                 subject: "한성대학교 커뮤니티 앱",
                 img: "/images/HANDAM.png",

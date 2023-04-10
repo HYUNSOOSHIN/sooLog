@@ -14,12 +14,10 @@ const ResumePage = () => {
                             title
                             description
                             whatdidido
-                            techstack
                         }
                         sideProjects {
                             title
                             links {
-                                link
                                 demo
                                 github
                             }
@@ -118,7 +116,6 @@ const ResumePage = () => {
                                             <span className="dot">•</span> {item.title} <span className="description">{item.description}</span>
                                         </p>
                                         <p className="what-did-i-do">{item.whatdidido}</p>
-                                        <p className="tech-stack">Tech Stack : {item.techstack}</p>
                                     </div>
                                 ))}
                             </div>
@@ -191,20 +188,6 @@ const ProjectItem = (props) => {
         <div className="project-item">
             <div className="flex-view">
                 <h4>{title}</h4>
-                {links.link && (
-                    <a
-                        href={"/#"}
-                        target="_blank"
-                        rel="noreferrer"
-                        title="Link"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            alert("없지롱~");
-                        }}
-                    >
-                        <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                )}
                 {links.demo && (
                     <a href={links.demo} target="_blank" rel="noreferrer" title="Demo">
                         <i className="fa-solid fa-desktop"></i>
