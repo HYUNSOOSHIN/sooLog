@@ -145,12 +145,12 @@ const ResumePage = () => {
                     </h2>
                     <div className="content-view">
                         <ul>
-                            <li>HTML/CSS</li>
-                            <li>JavaScript</li>
-                            <li>React.js</li>
-                            <li>Gatsby.js</li>
-                            <li>Next.js</li>
-                            <li>React Native</li>
+                            <li>• HTML/CSS</li>
+                            <li>• JavaScript</li>
+                            <li>• React.js</li>
+                            <li>• Gatsby.js</li>
+                            <li>• Next.js</li>
+                            <li>• React Native</li>
                         </ul>
                     </div>
                 </section>

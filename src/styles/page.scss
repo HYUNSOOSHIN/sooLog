@@ -79,7 +79,8 @@
 
 #container-resume {
     h1 {
-        font-size: 38px;
+        font-size: 45px;
+        font-family: GmarketSansM;
         line-height: 1.2;
         white-space: pre-line;
         word-break: keep-all;
@@ -93,17 +94,21 @@
         margin-bottom: 50px;
 
         h2 {
-            font-size: 35px;
+            font-size: 40px;
             font-family: GmarketSansM;
 
             .dot {
                 color: $primary;
-                font-size: 48px;
+                font-size: 40px;
             }
         }
 
         div.content-view {
-            margin-top: 20px;
+            margin-top: 50px;
+
+            p {
+                font-size: 18px;
+            }
         }
     }
 
@@ -139,7 +144,7 @@
             h3 {
                 margin: 20px 0;
                 color: $primary;
-                font-size: 24px;
+                font-size: 30px;
                 font-family: GmarketSansM;
             }
 
@@ -149,13 +154,17 @@
                 margin-bottom: 10px;
 
                 i {
-                    width: 14px;
+                    display: flex;
+                    justify-content: center;
+                    width: 18px;
+                    height: 18px;
+                    font-size: 16px;
                 }
 
                 .content {
                     margin-left: 10px;
                     color: $black;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
 
                 a {
@@ -184,9 +193,10 @@
 
                 & > span {
                     display: inline-block;
-                    margin-bottom: 12px;
+                    margin-bottom: 6px;
                     border-bottom: 1px solid $white;
-                    font-size: 28px;
+                    font-size: 30px;
+                    font-family: GmarketSansM;
 
                     &:hover {
                         border-bottom: 1px solid $border;
@@ -195,8 +205,9 @@
             }
 
             h3 {
-                font-size: 28px;
-                margin-bottom: 12px;
+                font-size: 30px;
+                font-family: GmarketSansM;
+                margin-bottom: 6px;
             }
 
             p.description {
@@ -212,12 +223,12 @@
 
                     p.position {
                         margin-bottom: 8px;
-                        font-size: 18px;
+                        font-size: 20px;
                         font-family: GmarketSansM;
                     }
 
                     p.period {
-                        font-size: 18px;
+                        font-size: 20px;
                     }
                 }
 
@@ -225,8 +236,12 @@
                     flex: 1;
 
                     li {
-                        font-size: 18px;
-                        line-height: 1.4;
+                        margin-bottom: 8px;
+                        font-size: 20px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
@@ -244,7 +259,7 @@
 
                     .title {
                         margin-bottom: 8px;
-                        font-size: 15px;
+                        font-size: 18px;
                         font-family: GmarketSansM;
 
                         span.dot {
@@ -253,13 +268,13 @@
 
                         span.description {
                             color: $secondary;
-                            font-size: 14px;
+                            font-size: 16px;
                             font-family: GmarketSansL;
                         }
                     }
 
                     .what-did-i-do {
-                        font-size: 13px;
+                        font-size: 16px;
                         font-family: GmarketSansL;
                         line-height: 1.4;
                         white-space: pre-wrap;
@@ -271,7 +286,8 @@
 
     section.skill {
         li {
-            line-height: 1.4;
+            font-size: 18px;
+            line-height: 1.6;
         }
     }
 
@@ -286,7 +302,7 @@
             div.flex-view {
                 display: flex;
                 align-items: center;
-                margin-bottom: 6px;
+                margin-bottom: 8px;
             }
 
             h4 {
@@ -296,10 +312,12 @@
             }
 
             a {
+                height: 20px;
                 margin-left: 12px;
 
                 i {
                     color: #dbdbdb;
+                    font-size: 18px;
                 }
 
                 &:hover {
@@ -312,7 +330,7 @@
             p.description {
                 margin-bottom: 8px;
                 color: $black;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             div.img-wrapper {
@@ -342,7 +360,7 @@
                 margin-top: 8px;
 
                 li {
-                    font-size: 13px;
+                    font-size: 16px;
                     line-height: 1.5;
                 }
             }
@@ -462,6 +480,10 @@
     }
 
     #container-resume {
+        h1 {
+            font-size: 35px;
+        }
+
         section.introduce {
             div.flex-view {
                 flex-direction: column;
@@ -529,6 +551,10 @@
     }
 
     #container-resume {
+        h1 {
+            font-size: 30px;
+        }
+
         section.sideproject {
             .project-item {
                 div.img-wrapper {
