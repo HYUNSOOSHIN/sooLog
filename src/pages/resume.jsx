@@ -104,7 +104,6 @@ const ResumePage = () => {
                                 <div className="right">
                                     <ul>
                                         <li>• Gatsby.js 보일러 플레이트 개발</li>
-                                        <li>• Next.js 보일러 플레이트 개발</li>
                                         <li>• 외주 프로젝트 개발</li>
                                     </ul>
                                 </div>
