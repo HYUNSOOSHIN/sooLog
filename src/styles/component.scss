@@ -2,7 +2,7 @@
 .bio-card {
     display: flex;
     align-items: center;
-    width: 500px;
+    max-width: 500px;
 
     &>img {
         width: 100px;
