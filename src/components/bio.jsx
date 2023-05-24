@@ -1,10 +1,9 @@
 import React from "react";
-import img_hyunsoo from "/static/images/hyunsoo.jpg";
 
 const Bio = () => {
     return (
         <div className="bio-card">
-            <img src={img_hyunsoo} alt="my img" />
+            <img src={"/images/hyunsoo.jpg"} alt="my img" />
             <div className="text-view">
                 <p className="name">HYUNSOOSHIN</p>
                 <p className="intro">안녕하세요. 신현수입니다.</p>

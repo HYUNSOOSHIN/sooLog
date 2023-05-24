@@ -3,7 +3,7 @@ module.exports = {
         title: `HYUNSOOSHIN`,
         description: `안녕하세요. 신현수입니다.`,
         author: `@HYUNSOOSHIN`,
-        siteUrl: `https://sooooolog.gatsbyjs.io`,
+        siteUrl: `https://sooooolog.hyunsooshin.com`,
         fgbProjects: [
             { title: "온리버디", description: "반려동물 용품 쇼핑몰", whatdidido: " - 사용자PC, 통합관리자, 벤더관리자 페이지 작업\n - Next.js / Redux" },
             {
@@ -29,7 +29,7 @@ module.exports = {
             {
                 title: "SOOLOG",
                 links: {
-                    demo: "https://sooooolog.gatsbyjs.io",
+                    demo: "https://sooooolog.hyunsooshin.com",
                     github: "https://github.com/HYUNSOOSHIN/sooLog",
                 },
                 subject: "개인 블로그 겸 포트폴리오 페이지",
@@ -39,7 +39,7 @@ module.exports = {
             {
                 title: "ZIORPARK",
                 links: {
-                    demo: "https://hyunsooshin.github.io/pepsi-man",
+                    demo: "https://pepsi-man.hyunsooshin.com",
                     github: "https://github.com/HYUNSOOSHIN/pepsi-man",
                 },
                 subject: "가수/래퍼 ZIORPARK 페이지",

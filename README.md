@@ -1,7 +1,7 @@
 # SOOLOG
 개인 블로그 겸 포트폴리오 페이지
 
-<img src="/static/images/hyunsoo.jpg" width="300px"/>
+<img src="/images/hyunsoo.jpg" width="300px"/>
 
 ## 📖 SOOLOG
 > 2022.06 - 진행중
@@ -34,4 +34,4 @@ To run the project, execute the following command:
 ```
 
 ## 🚀 Results
-https://sooooolog.gatsbyjs.io
+https://sooooolog.hyunsooshin.com

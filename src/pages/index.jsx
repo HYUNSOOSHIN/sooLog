@@ -2,7 +2,6 @@ import * as React from "react";
 import { Link } from "@reach/router";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import img_hyunsoo from "/static/images/hyunsoo.jpg";
 
 const IndexPage = () => (
     <Layout>
@@ -10,7 +9,7 @@ const IndexPage = () => (
         <div id="container-home">
             <div className="logo-view">
                 <Link className="logo" to="/resume">
-                    <img src={img_hyunsoo} />
+                    <img src={"/images/hyunsoo.jpg"} />
                 </Link>
             </div>
             <h1>HYUNSOOSHIN</h1>
