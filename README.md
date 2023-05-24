@@ -1,7 +1,7 @@
 # SOOLOG
 개인 블로그 겸 포트폴리오 페이지
 
-<img src="/images/hyunsoo.jpg" width="300px"/>
+<img src="/static/images/hyunsoo.jpg" width="300px"/>
 
 ## 📖 SOOLOG
 > 2022.06 - 진행중
