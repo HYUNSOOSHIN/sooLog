@@ -4,6 +4,7 @@ module.exports = {
         description: `안녕하세요. 신현수입니다.`,
         author: `@HYUNSOOSHIN`,
         siteUrl: `https://sooooolog.hyunsooshin.com`,
+        image: "/images/hyunsoo.jpg",
         fgbProjects: [
             { title: "온리버디", description: "반려동물 용품 쇼핑몰", whatdidido: " - 사용자PC, 통합관리자, 벤더관리자 페이지 작업\n - Next.js / Redux" },
             {
