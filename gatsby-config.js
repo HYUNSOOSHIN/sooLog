@@ -66,7 +66,7 @@ module.exports = {
                     "팀 프로젝트 : 프론트엔드팀 앱 개발자로 참여",
                     "기간 : 2018.06 - 2020.02",
                     "게시판 / 맛집추천 / 학교인증정보서비스 기능 개발",
-                    "Google PlayStore / Apple AppStore 배포 후 이용자 수 3000명 달성",
+                    "Google PlayStore / Apple AppStore 배포",
                     "Tech Stack : React Native / Redux",
                 ],
             },
@@ -78,8 +78,8 @@ module.exports = {
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                path: `${__dirname}/content/blog`,
                 name: `blog`,
+                path: `${__dirname}/content/blog`,
             },
         },
         {
