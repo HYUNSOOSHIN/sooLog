@@ -119,22 +119,6 @@ const ResumePage = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="experience-item">
-                            <h3>키즈팩토리</h3>
-                            <p className="description">키즈카페 전용솔루션 서비스</p>
-                            <div className="flex-view">
-                                <div className="left">
-                                    <p className="position">Frontend Developer</p>
-                                    <p className="period">2019.11 - 2020.04</p>
-                                </div>
-                                <div className="right">
-                                    <ul>
-                                        <li>• 키즈팩토리 솔루션 UX/UI 개발</li>
-                                        <li>• Gatsby.js 기술 검토 및 도입</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

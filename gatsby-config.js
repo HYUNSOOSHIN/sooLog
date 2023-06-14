@@ -6,16 +6,16 @@ module.exports = {
         siteUrl: `https://sooooolog.hyunsooshin.com`,
         image: "/images/hyunsoo.jpg",
         fgbProjects: [
-            { title: "온리버디", description: "반려동물 용품 쇼핑몰", whatdidido: " - 사용자PC, 통합관리자, 벤더관리자 페이지 작업\n - Next.js / Redux" },
+            {
+                title: "온리버디",
+                description: "반려동물 용품 쇼핑몰",
+                whatdidido: ` - 사용자 웹 / 통합관리자 웹 / 벤더관리자 웹 개발\n - Tech Stack : Next.js(CSR)`,
+            },
             {
                 title: "미미마켓",
                 description: "지역기반 소상공인 상점 플랫폼",
-                whatdidido:
-                    " - 모바일 웹뷰에 들어갈 사용자, 상점주 페이지 작업\n - 통합관리자, 벤더관리자 페이지 작업\n - React Native 웹뷰, FCM, SNS로그인 작업\n - 웹뷰와 웹페이지간 데이터 통신 작업\n - Next.js / Redux / React Native",
+                whatdidido: ` - 사용자 웹앱 / 상점주 웹앱 / 관리자 웹 개발\n - 웹뷰와 웹페이지간 데이터 통신 작업(SNS로그인 정보, 위치정보 등)\n - FCM push notification 기능 구현\n - SNS로그인 기능 구현\n - Teck Stack :  Next.js(CSR) & React Native(Webview)`,
             },
-            { title: "Elefarm", description: "스마트팜 관리", whatdidido: " - 스마트팜 관리자 페이지 작업\n - Gatsby.js / Redux" },
-            { title: "동틀녘", description: "학생 알람앱", whatdidido: " - 모바일 웹뷰에 들어갈 사용자 페이지 작업\n - 관리자 페이지 작업\n - Gatsby.js / Redux" },
-            { title: "심봉사", description: "봉사활동 정보앱", whatdidido: " - 모바일 웹뷰에 들어갈 사용자 페이지 작업\n - 관리자 페이지 작업\n - Gatsby.js / Redux" },
         ],
         sideProjects: [
             {
@@ -25,7 +25,7 @@ module.exports = {
                 },
                 subject: "소상공인 커뮤니티 서비스",
                 img: "/images/SOCKER.jpg",
-                descriptionList: ["팀 프로젝트 : 프론트엔드 개발자로 참여", "기간 : 2022.04 - 진행중", "Tech Stack : Next.js / React Native"],
+                descriptionList: ["팀 프로젝트 : 프론트엔드 개발자로 참여", "기간 : 2022.04 - 진행중", "Tech Stack : Next.js(CSR) / React Native"],
             },
             {
                 title: "SOOLOG",
