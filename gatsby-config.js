@@ -9,12 +9,12 @@ module.exports = {
             {
                 title: "온리버디",
                 description: "반려동물 용품 쇼핑몰",
-                whatdidido: ` - 사용자 웹 / 통합관리자 웹 / 벤더관리자 웹 개발\n - Tech Stack : Next.js(CSR)`,
+                whatdidido: ` - 사용자 웹 / 통합관리자 웹 / 벤더관리자 웹 개발\n - 웹 페이지 UI 작업 & API 연동 작업\n - SNS로그인 기능 작업(카카오, 네이버, 구글, 애플)\n - CREMA 리뷰 위젯 연동 작업\n - PASS 본인 인증 연동 작업\n - Tech Stack: React, Next(CSR), Redux`,
             },
             {
                 title: "미미마켓",
                 description: "지역기반 소상공인 상점 플랫폼",
-                whatdidido: ` - 사용자 웹앱 / 상점주 웹앱 / 관리자 웹 개발\n - 웹뷰와 웹페이지간 데이터 통신 작업(SNS로그인 정보, 위치정보 등)\n - FCM push notification 기능 구현\n - SNS로그인 기능 구현\n - Teck Stack :  Next.js(CSR) & React Native(Webview)`,
+                whatdidido: ` - 사용자 웹앱 / 상점주 웹앱 / 관리자 웹 개발\n - 웹 페이지 UI 작업 & API 연동 작업\n - 웹뷰와 웹페이지간 데이터 통신 작업(SNS로그인 정보, 위치정보 등)\n - FCM push notification 기능 구현\n - SNS로그인 기능 작업(카카오, 네이버, 애플)\n - Teck Stack:  React, Next(CSR), Redux, React Native (Webview)`,
             },
         ],
         sideProjects: [
