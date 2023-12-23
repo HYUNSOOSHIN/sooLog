@@ -17,7 +17,7 @@ module.exports = {
                     {
                         title: "AB WMS",
                         description: "에이비 물류 관리 시스템",
-                        whatdidido: ["WebView 형식 앱 개발", "구글 플레이스토어, 애플 앱스토어 배포", "Tech Stack: React.js, Redux, React Native, Node.js, Express.js"],
+                        whatdidido: ["WebView 형식 앱 개발", "Google PlayStore / Apple AppStore 배포", "Tech Stack: React.js, Redux, React Native, Node.js, Express.js"],
                     },
                     {
                         title: "FnBlock 외주 프로젝트",
@@ -84,12 +84,12 @@ module.exports = {
                 img: "/images/chae.png",
                 descriptionList: [
                     "개인 프로젝트",
-                    "기간 : 2023.12 - 진행중",
+                    "기간 : 2023.11 - 진행중",
                     "WebView 기반 앱 개발",
                     "웹, 앱 미디어 재생 플레이어 각각 개발 (NPM 패키지 사용)",
                     "웹뷰와 웹페이지간 데이터 통신 작업 (음악 재생 관련)",
                     "Google PlayStore 배포 진행중 (2023.12.23 기준)",
-                    "Tech Stack : Next.js / React Native / FireBase",
+                    "Tech Stack : Next.js / React Native",
                 ],
             },
             // {
