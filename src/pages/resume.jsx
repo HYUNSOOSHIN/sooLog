@@ -10,16 +10,26 @@ const ResumePage = () => {
             query {
                 site {
                     siteMetadata {
-                        fgbProjects {
-                            title
+                        workExperiences {
+                            companyName
+                            companySiteUrl
                             description
-                            whatdidido
+                            position
+                            period
+                            summaries
+                            projects {
+                                title
+                                description
+                                whatdidido
+                            }
                         }
                         sideProjects {
                             title
                             links {
                                 demo
                                 github
+                                android
+                                ios
                             }
                             subject
                             img
@@ -91,34 +101,41 @@ const ResumePage = () => {
                         Work Experience<span className="dot">.</span>
                     </h2>
                     <div className="content-view">
-                        <div className="experience-item">
-                            <a href="https://ict.fgb.ai/" target="_blank" rel="noreferrer" title="홈 페이지">
-                                <span>프리것버드</span>
-                            </a>
-                            <p className="description">아웃소싱 외주 전문 개발사</p>
-                            <div className="flex-view">
-                                <div className="left">
-                                    <p className="position">Frontend Developer</p>
-                                    <p className="period">2020.04 - 2023.03</p>
-                                </div>
-                                <div className="right">
-                                    <ul>
-                                        <li>• Gatsby.js 보일러 플레이트 개발</li>
-                                        <li>• 외주 프로젝트 개발</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="project-view">
-                                {pageQuery.site.siteMetadata.fgbProjects.map((item, index) => (
-                                    <div key={index} className="project-item">
-                                        <p className="title">
-                                            <span className="dot">•</span> {item.title} <span className="description">{item.description}</span>
-                                        </p>
-                                        <p className="what-did-i-do">{item.whatdidido}</p>
+                        {pageQuery.site.siteMetadata.workExperiences.map((company, companyIndex) => (
+                            <div key={company.companyName + companyIndex} className="experience-item">
+                                <a href={company.companySiteUrl} target="_blank" rel="noreferrer" title="홈 페이지">
+                                    <span>{company.companyName}</span>
+                                </a>
+                                <p className="description">{company.description}</p>
+                                <div className="flex-view">
+                                    <div className="left">
+                                        <p className="position">{company.position}</p>
+                                        <p className="period">{company.period}</p>
                                     </div>
-                                ))}
+                                    <div className="right">
+                                        <ul>
+                                            {company.summaries.map((summary, summaryIndex) => (
+                                                <li key={summaryIndex}>• {summary}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="project-view">
+                                    {company.projects.map((project, projectIndex) => (
+                                        <div key={projectIndex} className="project-item">
+                                            <p className="title">
+                                                <span className="dot">•</span> {project.title} <span className="description">{project.description}</span>
+                                            </p>
+                                            {project.whatdidido.map((dooo, doooIndex) => (
+                                                <p key={dooo + doooIndex} className="what-did-i-do">
+                                                    &nbsp; - {dooo}
+                                                </p>
+                                            ))}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </section>
 
@@ -179,6 +196,16 @@ const ProjectItem = (props) => {
                 {links.github && (
                     <a href={links.github} target="_blank" rel="noreferrer" title="Github">
                         <i className="fa-brands fa-github"></i>
+                    </a>
+                )}
+                {links.android && (
+                    <a href={links.android} target="_blank" rel="noreferrer" title="Github">
+                        <i className="fa-brands fa-google-play"></i>
+                    </a>
+                )}
+                {links.ios && (
+                    <a href={links.ios} target="_blank" rel="noreferrer" title="Github">
+                        <i className="fa-brands fa-app-store-ios"></i>
                     </a>
                 )}
             </div>
