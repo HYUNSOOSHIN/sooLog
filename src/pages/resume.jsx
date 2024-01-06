@@ -199,12 +199,12 @@ const ProjectItem = (props) => {
                     </a>
                 )}
                 {links.android && (
-                    <a href={links.android} target="_blank" rel="noreferrer" title="Github">
+                    <a href={links.android} target="_blank" rel="noreferrer" title="Play Store">
                         <i className="fa-brands fa-google-play"></i>
                     </a>
                 )}
                 {links.ios && (
-                    <a href={links.ios} target="_blank" rel="noreferrer" title="Github">
+                    <a href={links.ios} target="_blank" rel="noreferrer" title="App Store">
                         <i className="fa-brands fa-app-store-ios"></i>
                     </a>
                 )}
