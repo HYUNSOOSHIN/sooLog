@@ -34,4 +34,4 @@ To run the project, execute the following command:
 ```
 
 ## 🚀 Results
-https://sooooolog.hyunsooshin.com
+https://hyunsooshin.com

@@ -3,7 +3,7 @@ module.exports = {
         title: `HYUNSOOSHIN`,
         description: `안녕하세요. 신현수입니다.`,
         author: `@HYUNSOOSHIN`,
-        siteUrl: `https://sooooolog.hyunsooshin.com`,
+        siteUrl: `https://hyunsooshin.com`,
         image: "/images/hyunsoo.jpg",
         workExperiences: [
             {
@@ -104,7 +104,7 @@ module.exports = {
             {
                 title: "SOOLOG",
                 links: {
-                    demo: "https://sooooolog.hyunsooshin.com",
+                    demo: "https://hyunsooshin.com",
                     github: "https://github.com/HYUNSOOSHIN/sooLog",
                     android: "",
                     ios: "",
