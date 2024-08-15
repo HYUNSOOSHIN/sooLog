@@ -73,7 +73,19 @@ module.exports = {
         ],
         sideProjects: [
             {
-                title: "chae",
+                title: "Moment",
+                links: {
+                    demo: "https://moment-jet.vercel.app",
+                    github: "",
+                    android: "",
+                    ios: "",
+                },
+                subject: "코인 시세 차익 정보 제공 사이트",
+                img: "/images/moment.png",
+                descriptionList: ["개인 프로젝트", "기간 : 2024.06 - 진행중", "국내외 코인 거래소 시세차익 정보 제공 기능", "Tech Stack : Next.js / Redux"],
+            },
+            {
+                title: "ch.ch.chae",
                 links: {
                     demo: "https://chae.hyunsooshin.com",
                     github: "",
@@ -92,15 +104,6 @@ module.exports = {
                     "Tech Stack : Next.js / React Native",
                 ],
             },
-            // {
-            //     title: "SOCKER",
-            //     links: {
-            //         demo: "https://socker.co.kr",
-            //     },
-            //     subject: "소상공인 커뮤니티 서비스",
-            //     img: "/images/SOCKER.jpg",
-            //     descriptionList: ["팀 프로젝트 : 프론트엔드 개발자로 참여", "기간 : 2022.04 - 진행중", "Tech Stack : Next.js(CSR) / React Native"],
-            // },
             {
                 title: "SOOLOG",
                 links: {
@@ -109,7 +112,7 @@ module.exports = {
                     android: "",
                     ios: "",
                 },
-                subject: "개인 블로그 겸 포트폴리오 페이지",
+                subject: "개인 블로그 겸 포트폴리오",
                 img: "/images/hyunsoo.jpg",
                 descriptionList: ["개인 프로젝트", "기간 : 2022.06 - 진행중", "Tech Stack : Gatsby.js"],
             },
@@ -121,7 +124,7 @@ module.exports = {
                     android: "",
                     ios: "",
                 },
-                subject: "가수/래퍼 ZIORPARK 페이지",
+                subject: "가수/래퍼 ZIORPARK 사이트",
                 img: "/images/PEPSI-MAN.png",
                 descriptionList: [
                     "개인 프로젝트",
@@ -131,24 +134,6 @@ module.exports = {
                     "페이지 내 컨텐츠 관리를 위한 관리자 모드 개발",
                     "Firebase를 이용한 사용자 인증 / 실시간 데이터베이스 적용",
                     "Tech Stack : React.js / Redux / FireBase (Authentication, FireStore, Storage)",
-                ],
-            },
-            {
-                title: "한담",
-                links: {
-                    demo: "",
-                    // github: "https://github.com/HYUNSOOSHIN/handam-client",
-                    android: "",
-                    ios: "",
-                },
-                subject: "한성대학교 커뮤니티 앱",
-                img: "/images/HANDAM.png",
-                descriptionList: [
-                    "팀 프로젝트 : 프론트엔드팀 앱 개발자로 참여",
-                    "기간 : 2018.06 - 2020.02",
-                    "게시판 / 맛집추천 / 학교인증정보서비스 기능 개발",
-                    "Google PlayStore / Apple AppStore 배포",
-                    "Tech Stack : React Native / Redux",
                 ],
             },
         ],
