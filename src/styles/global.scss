@@ -1,36 +1,24 @@
 @font-face {
-    font-family: 'GmarketSansL';
+    font-family: "GmarketSans";
     font-weight: 300;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Gmarket/GmarketSansLight.woff") format("woff");
     font-display: swap;
-} 
+}
 @font-face {
-    font-family: 'GmarketSansM';
+    font-family: "GmarketSans";
     font-weight: 500;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Gmarket/GmarketSansMedium.woff") format("woff");
     font-display: swap;
-} 
+}
 @font-face {
-    font-family: 'GmarketSansB';
+    font-family: "GmarketSans";
     font-weight: 700;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    src: url("https://cdn.jsdelivr.net/gh/fontbee/font@main/Gmarket/GmarketSansBold.woff") format("woff");
     font-display: swap;
-} 
+}
 
 $primary: #7b68ee;
 $secondary: #a0a0a0;
@@ -65,10 +53,12 @@ button {
 }
 
 // TABLET
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 
 // MOBILE M
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+}
 
 @import "layout.scss";
 @import "page.scss";
