@@ -126,9 +126,10 @@ const ResumePage = () => {
                                             <p className="title">
                                                 <span className="dot">•</span> {project.title} <span className="description">{project.description}</span>
                                             </p>
+
                                             {project.whatdidido.map((dooo, doooIndex) => (
                                                 <p key={dooo + doooIndex} className="what-did-i-do">
-                                                    &nbsp; - {dooo}
+                                                    &nbsp; • {dooo}
                                                 </p>
                                             ))}
                                         </div>
