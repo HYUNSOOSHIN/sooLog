@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Link } from "@reach/router";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const IndexPage = () => (
     <Layout>
-        <Seo title="Home" />
         <div id="container-home">
             <div className="logo-view">
                 <Link className="logo" to="/resume">
@@ -19,3 +19,9 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const Head = ({ location }) => <Seo title="Home" pathname={location.pathname} />;
+
+Head.propTypes = {
+    location: PropTypes.object.isRequired,
+};

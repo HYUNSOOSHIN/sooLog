@@ -156,7 +156,6 @@ module.exports = {
         ],
     },
     plugins: [
-        `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
         {
             resolve: `gatsby-source-filesystem`,
@@ -202,8 +201,9 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `SOOLOG`,
+                short_name: `SOOLOG`,
+                lang: `ko`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 // This will impact how browsers show your PWA/website
@@ -265,7 +265,7 @@ module.exports = {
                     }
                   `,
                         output: "/rss.xml",
-                        title: "Gatsby Starter Blog RSS Feed",
+                        title: "SOOLOG RSS Feed",
                     },
                 ],
             },

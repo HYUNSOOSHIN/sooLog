@@ -1,107 +1,83 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect } from "react";
-import { Link, graphql } from "gatsby";
-import { navigate } from "@reach/router";
+import React, { useMemo } from "react";
+import { Link, graphql, navigate } from "gatsby";
 import { useScrollEvent } from "../hooks/useScrollEvent";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Bio from "../components/bio";
 import "../styles/blog-post.scss";
 
+const getHeaderElements = () => {
+    return Array.from(document.querySelectorAll(`.contents-view :is(h1, h2, h3, h4)[id]`));
+};
+
+const getTocLinkElement = (id) => {
+    return document.querySelector(`.toc a[href="#${CSS.escape(id)}"]`);
+};
+
+const onScroll = () => {
+    const currentoffsetY = window.pageYOffset;
+    for (const headerElement of getHeaderElements()) {
+        const { top } = headerElement.getBoundingClientRect();
+        const elementTop = top + currentoffsetY;
+        const tocLinkElement = getTocLinkElement(headerElement.id);
+        if (tocLinkElement) {
+            if (currentoffsetY >= elementTop - 10) {
+                headerElement.classList.add("toc-header-active");
+                tocLinkElement.classList.add("active");
+            } else {
+                headerElement.classList.remove("toc-header-active");
+                tocLinkElement.classList.remove("active");
+            }
+        }
+    }
+};
+
+// requestAnimationFrame 단위로 콜백 실행을 제한
+const throttleByAnimationFrame = (cb) => {
+    let tick = false;
+
+    return () => {
+        if (tick) {
+            return;
+        }
+
+        tick = true;
+        requestAnimationFrame(() => {
+            tick = false;
+            cb();
+        });
+    };
+};
+
 const BlogPostTemplate = ({ data, location }) => {
     const post = data.markdownRemark;
     const siteTitle = data.site.siteMetadata?.title || `Title`;
     const { previous, next } = data;
 
-    useEffect(() => {
-        const headerElements = getHeaderElements();
+    const throttledOnScroll = useMemo(() => throttleByAnimationFrame(onScroll), []);
+    useScrollEvent(throttledOnScroll);
 
-        headerElements.forEach((headerElement) => {
-            const tocLinkElement = document.querySelector(`a[href*="${encodeURI(headerElement.id)}"]`);
-            if (tocLinkElement)
-                tocLinkElement.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    navigate(`#${headerElement.id}`, { replace: true });
-                });
-        });
-    });
-
-    const getHeaderElements = () => {
-        const headerSelectors = `h1, h2, h3, h4`;
-        return Array.from(document.querySelectorAll(headerSelectors));
+    const onClickTocLink = (e, id) => {
+        e.preventDefault();
+        navigate(`#${id}`, { replace: true });
     };
-
-    const onScroll = () => {
-        const currentoffsetY = window.pageYOffset;
-        const headerElements = getHeaderElements();
-        for (const headerElement of headerElements) {
-            const { top } = headerElement.getBoundingClientRect();
-            const elementTop = top + currentoffsetY;
-            const tocLinkElement = document.querySelector(`a[href*="${encodeURI(headerElement.id)}"]`);
-            if (tocLinkElement) {
-                if (currentoffsetY >= elementTop - 10) {
-                    headerElement.classList.add("toc-header-active");
-                    tocLinkElement.classList.add("active");
-                } else {
-                    headerElement.classList.remove("toc-header-active");
-                    tocLinkElement.classList.remove("active");
-                }
-            }
-        }
-    };
-
-    const toFit = (cb, { dismissCondition = () => false, triggerCondition = () => true }) => {
-        if (!cb) {
-            throw Error("Invalid required arguments");
-        }
-
-        let tick = false;
-
-        return function () {
-            if (tick) {
-                return;
-            }
-
-            tick = true;
-            return requestAnimationFrame(() => {
-                if (dismissCondition()) {
-                    tick = false;
-                    return;
-                }
-
-                if (triggerCondition()) {
-                    tick = false;
-                    return cb();
-                }
-            });
-        };
-    };
-
-    useScrollEvent(() => {
-        return toFit(onScroll, {})();
-    });
 
     return (
         <Layout location={location} title={siteTitle}>
-            <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} />
 
             <aside>
-                {/* <div className="toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }} /> */}
                 <div className="toc">
                     <p>Table of Contents</p>
-                    {post.headings.map((heading) => {
-                        if (heading.depth > 4) {
-                            return <div />;
-                        }
-
-                        return (
-                            <div key={heading.value}>
-                                <a className={"depth" + heading.depth} href={`#${heading.value.replace(/\s+/g, "-").toLowerCase()}`}>
+                    {post.headings
+                        .filter((heading) => heading.depth <= 4 && heading.id)
+                        .map((heading) => (
+                            <div key={heading.id}>
+                                <a className={"depth" + heading.depth} href={`#${heading.id}`} onClick={(e) => onClickTocLink(e, heading.id)}>
                                     {heading.value}
                                 </a>
                             </div>
-                        );
-                    })}
+                        ))}
                 </div>
             </aside>
 
@@ -140,6 +116,11 @@ const BlogPostTemplate = ({ data, location }) => {
 
 export default BlogPostTemplate;
 
+export const Head = ({ data, location }) => {
+    const post = data.markdownRemark;
+    return <Seo title={post.frontmatter.title} description={post.frontmatter.description || post.excerpt} pathname={location.pathname} type="article" />;
+};
+
 export const pageQuery = graphql`
     query BlogPostBySlug($id: String!, $previousPostId: String, $nextPostId: String) {
         site {
@@ -153,6 +134,7 @@ export const pageQuery = graphql`
             html
             tableOfContents
             headings {
+                id
                 value
                 depth
             }

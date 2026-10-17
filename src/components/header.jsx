@@ -6,18 +6,16 @@ const Header = ({ siteTitle }) => {
     const [isSideBar, setIsSideBar] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("resize", () => {
+        const onResize = () => {
             if (window.innerWidth > 768) {
                 setIsSideBar(false);
             }
-        });
+        };
+
+        window.addEventListener("resize", onResize);
 
         return () => {
-            window.removeEventListener("resize", () => {
-                if (window.innerWidth > 768) {
-                    setIsSideBar(false);
-                }
-            });
+            window.removeEventListener("resize", onResize);
         };
     }, []);
 

@@ -43,7 +43,6 @@ const ResumePage = () => {
 
     return (
         <Layout>
-            <Seo title="Resume" />
             <div id="container-resume">
                 <h1>{`안녕하세요.\n하고 싶은 거 하고 싶은 프론트엔드 개발자,\n신현수입니다.`}</h1>
 
@@ -181,6 +180,12 @@ const ResumePage = () => {
 };
 
 export default ResumePage;
+
+export const Head = ({ location }) => <Seo title="Resume" pathname={location.pathname} />;
+
+Head.propTypes = {
+    location: PropTypes.object.isRequired,
+};
 
 const ProjectItem = (props) => {
     const { title = "", links = {}, subject = "", img = "", descriptionList = [] } = props.data;

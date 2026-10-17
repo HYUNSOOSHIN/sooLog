@@ -1,10 +1,10 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 const NotFoundPage = () => (
     <Layout>
-        <Seo title="404: Not found" />
         <div id="container-404">
             <img src={"/images/hyunsoo.jpg"} />
 
@@ -17,3 +17,9 @@ const NotFoundPage = () => (
 );
 
 export default NotFoundPage;
+
+export const Head = ({ location }) => <Seo title="404: Not found" pathname={location.pathname} />;
+
+Head.propTypes = {
+    location: PropTypes.object.isRequired,
+};

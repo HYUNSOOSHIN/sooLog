@@ -15,7 +15,6 @@ const BlogPage = ({ data, location }) => {
 
     return (
         <Layout title={"Blog"}>
-            <Seo title="Blog" />
             <div id="container-blog">
                 <Bio />
                 <aside>
@@ -64,6 +63,8 @@ const BlogPage = ({ data, location }) => {
 };
 
 export default BlogPage;
+
+export const Head = ({ location }) => <Seo title="Blog" pathname={location.pathname} />;
 
 export const pageQuery = graphql`
     query {

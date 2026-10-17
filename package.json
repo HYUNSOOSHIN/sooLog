@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "soolog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "개인 블로그 겸 포트폴리오",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "HYUNSOOSHIN",
   "dependencies": {
     "gatsby": "^5.12.9",
     "gatsby-adapter-netlify": "^1.0.3",
@@ -11,7 +11,6 @@
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
     "gatsby-plugin-offline": "^6.12.3",
-    "gatsby-plugin-react-helmet": "^6.12.0",
     "gatsby-plugin-sass": "^6.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-remark-autolink-headers": "^6.12.3",
@@ -27,7 +26,6 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "sass": "^1.52.2"
   },
   "devDependencies": {
@@ -54,9 +52,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/HYUNSOOSHIN/sooLog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/HYUNSOOSHIN/sooLog/issues"
   }
 }
