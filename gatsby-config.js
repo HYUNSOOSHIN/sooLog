@@ -3,7 +3,7 @@ module.exports = {
         title: `HYUNSOOSHIN`,
         description: `안녕하세요. 신현수입니다.`,
         author: `@HYUNSOOSHIN`,
-        siteUrl: `https://hyunsooshin.com`,
+        siteUrl: `https://www.hyunsooshin.com`,
         image: "/images/hyunsoo.jpg",
         workExperiences: [
             {
