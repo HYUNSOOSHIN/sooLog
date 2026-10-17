@@ -89,6 +89,26 @@ module.exports = {
         ],
         sideProjects: [
             {
+                title: "ATeaM",
+                links: {
+                    demo: "https://ateam.hyunsooshin.com",
+                    github: "",
+                    android: "",
+                    ios: "",
+                },
+                subject: "축구/풋살 팀 운영 플랫폼 서비스",
+                img: "/images/ateam.png",
+                descriptionList: [
+                    "개인 프로젝트",
+                    "기간 : 2026.10 - 진행중",
+                    "Claude Code를 활용한 개발",
+                    "Supabase를 이용한 DB / 로그인 / 인증 처리",
+                    "Resend를 이용한 이메일 기능 개발",
+                    "Vercel 배포",
+                    "Tech Stack : Next.js / Supabase / Resend / Vercel",
+                ],
+            },
+            {
                 title: "Moment",
                 links: {
                     demo: "https://moment-jet.vercel.app",

@@ -218,9 +218,11 @@ const ProjectItem = (props) => {
 
             <p className="description">{subject}</p>
 
-            <div className="img-wrapper">
-                <img src={img} alt="pepsi-man project img" />
-            </div>
+            {img && (
+                <div className="img-wrapper">
+                    <img src={img} alt={`${title} project img`} />
+                </div>
+            )}
 
             <ul>
                 {descriptionList.map((item, index) => (
