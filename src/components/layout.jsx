@@ -26,7 +26,7 @@ const Layout = ({ children, isHeader = true }) => {
             {isHeader && <Header siteTitle={data.site.siteMetadata?.title || `Title`} />}
             <main>{children}</main>
             <footer>
-                <span className="copyright">&copy; {new Date().getFullYear()} HYUNSOOSHIN. All rights reserved.</span> <span className="powered">Powered by Gatsby</span>
+                <span className="copyright">&copy; 2022-{new Date().getFullYear()} HYUNSOOSHIN. All rights reserved.</span> <span className="powered">Powered by Gatsby</span>
             </footer>
         </>
     );
