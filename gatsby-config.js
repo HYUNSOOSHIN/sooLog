@@ -181,13 +181,13 @@ module.exports = {
             {
                 title: "ZIORPARK",
                 links: {
-                    demo: "https://pepsi-man.hyunsooshin.com",
+                    demo: "https://zior.hyunsooshin.com",
                     github: "https://github.com/HYUNSOOSHIN/pepsi-man",
                     android: "",
                     ios: "",
                 },
                 subject: "가수/래퍼 ZIORPARK 사이트",
-                img: "/images/PEPSI-MAN.png",
+                img: "/images/zior.png",
                 descriptionList: [
                     "개인 프로젝트",
                     "기간 : 2020.11 - 2022.06",
