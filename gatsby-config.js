@@ -89,6 +89,27 @@ module.exports = {
         ],
         sideProjects: [
             {
+                title: "꽉채워달려",
+                links: {
+                    demo: "https://fullstride.hyunsooshin.com",
+                    github: "",
+                    android: "",
+                    ios: "",
+                },
+                subject: "러닝 중 전방 보행 신호등의 상태와 잔여시간을 알려주는 도시 러너용 러닝 앱",
+                img: "/images/fullstride.png",
+                descriptionList: [
+                    "개인 프로젝트",
+                    "기간 : 2026.10 - 진행중",
+                    "Claude Code를 활용한 개발",
+                    "공공데이터 신호등 실시간 정보를 이용한 전방 교차로 보행 신호 안내",
+                    "MapLibre + OSM 기반 지도와 pgRouting을 이용한 보행로 코스 그리기",
+                    "Supabase를 이용한 카카오 / 구글 로그인 및 DB 처리",
+                    "Cloudflare Workers를 이용한 웹 / 관리자 페이지 배포",
+                    "Tech Stack : React Native (Expo) / Supabase / MapLibre / Cloudflare Workers",
+                ],
+            },
+            {
                 title: "ATeaM",
                 links: {
                     demo: "https://ateam.hyunsooshin.com",
