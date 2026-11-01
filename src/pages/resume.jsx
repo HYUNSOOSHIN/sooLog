@@ -55,7 +55,7 @@ const ResumePage = () => {
                     <div className="content-view">
                         <div className="flex-view">
                             <div className="img-wrapper">
-                                <img src="/images/introduce.png" alt="hyunsoo photo img" />
+                                <img src="/images/hyunsoo-gray.jpg" alt="hyunsoo photo img" />
                             </div>
                             <div className="info-view">
                                 <h3>Info</h3>
