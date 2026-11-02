@@ -134,18 +134,6 @@ module.exports = {
                 ],
             },
             {
-                title: "Moment",
-                links: {
-                    demo: "https://moment-jet.vercel.app",
-                    github: "",
-                    android: "",
-                    ios: "",
-                },
-                subject: "코인 시세 차익 정보 제공 사이트",
-                img: "/images/moment.png",
-                descriptionList: ["개인 프로젝트", "기간 : 2024.06 - 진행중", "국내외 코인 거래소 시세차익 정보 제공 기능", "Tech Stack : Next.js / Redux"],
-            },
-            {
                 title: "ch.ch.chae",
                 links: {
                     demo: "https://chae.hyunsooshin.com",
